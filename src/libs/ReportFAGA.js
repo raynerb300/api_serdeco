@@ -51,5 +51,7 @@ async function ReportFAGA() {
 	        where ("MONTO_RELLENO"!='0' OR "MONTO_ASEO"!='0') AND d.debt_status_id=4 and d.updated_at::DATE < NOW()::DATE - INTERVAL  '1 DAY'
     	    and p.id is null 
 	`) 
-    .then( result => {return (result)})
+    .then( result => {
+        result[0]
+        return (result)})
 }
