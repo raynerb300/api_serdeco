@@ -52,6 +52,5 @@ async function ReportFAGA() {
     	    and p.id is null 
 	`) 
     .then( result => {
-        result[0]
-        return (result)})
+        return result[0]})
 }
