@@ -1,7 +1,7 @@
 import { HEADER } from "./Constants.js";
 import fs from 'fs';
 
-export function generateFile(data=[]) {
+export async function generateFile(data=[]) {
     let contenido = "";
     const numero = [];
     let fileName = "documento.txt"

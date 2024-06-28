@@ -1,5 +1,7 @@
-async function ReportFAGA() {
-    return await Conection.query (`
+import db_suiche from "./Conection.js";
+
+export async function ReportFAGA() {
+    return await db_suiche.query (`
 
         select 	"NVA_CTA_CTO", 
 	        	'' "INT_COMER",
@@ -51,5 +53,6 @@ async function ReportFAGA() {
 	        where ("MONTO_RELLENO"!='0' OR "MONTO_ASEO"!='0') AND d.debt_status_id=4 and d.updated_at::DATE < NOW()::DATE - INTERVAL  '1 DAY'
     	    and p.id is null 
 	`) 
-    .then( result => {return (result)})
-}
+    .then( result => { 
+        return result[0]})
+};
