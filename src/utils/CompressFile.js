@@ -1,7 +1,7 @@
 import fs from 'fs';
 import archiver from 'archiver';
 
-export function CompressFile(nombreArchivo){
+export async function CompressFile(nombreArchivo){
     let ubicacionArchivo = "./reports/"
     let output = fs.createWriteStream (ubicacionArchivo + nombreArchivo + ".zip");
     let archive = archiver ("zip");

@@ -3,10 +3,10 @@ import { ReportFAGA } from "../libs/ReportFAGA.js";
 import { SendFAGA } from "../libs/SendEmail.js";
 
 const job = new CronJob (
-    " 20 6 * * * ",
+    " * * * * * ",
     function () { 
     ReportFAGA ()
-    SendFAGA ("Facturas Generadas Anuladas")
+    SendFAGA ("Facturas_Generadas_Anuladas")
     },
     null,
     true
