@@ -14,3 +14,4 @@ db_suiche.authenticate().then(() => {
 }).catch ((error) => {
     console.log ("Error de coneccion, no se pudo conectar con la base de datos!")
 });
+export default db_suiche;
